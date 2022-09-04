@@ -1,0 +1,50 @@
+Count Duplicate Elements
+Bonus Part 0 
+Let’s suppose you are given Q(1 <= Q <= 10000) queries and now array elements are in the range [1, 100]. 
+Each query is denoted by a pair of integers L and R. 
+The answer to each query is the number of non-unique elements in the subarray arr[L, R].
+
+Answer
+The first approach to this problem is split the big query into smaller queries (chunks) to avoid possible crashing.
+Hereafter use the available function to process the targeted subarray[L,R]. 
+
+In terms of 10000 queries performance (CPU & RAM) plays a signicant role. 
+To tackle this further (if allowed) I would use Redis to solve where all divided chunks are processed simultaneously.
+
+In terms of SQL work with partition, or group the data which function is already built in most SQL.
+
+KEYWORDS: Chunks, Partition
+== 
+
+Bonus Part 1 
+Let’s suppose the above array is sorted. Can you solve this problem in more optimized space complexity?
+
+Answer
+The first approach is get rid of all duplicates and work with unique values.
+
+KEYWORDS: Unique values
+
+==
+
+Character Reprogramming
+Bonus Part
+What if the problem is modified so a particular position (x, y) is required to be reached with given moves. 
+What is the maximum number of characters that can be removed such that it is possible to reach (x, y) with the remaining moves? 
+It’s guaranteed that it is possible to reach the position (x, y).
+
+Answer
+Yura, when I first saw this message I thought to myself "what in the world am I reading"
+With the help of my friend Google I came up with some theory how to tackle this problem (Note I haven't confronted this in practical sense yet),
+because I am aware core of AIM has everything to with maps. So lots of coordinates!
+
+Combined what I learned in school I believe having a matrix could solve this problem (theorically).
+Since we have a Starting Path (x,y) and an End Path (x,y) the shortest distance should be able to be calculated using a matrix. Or perhaps Pythagorean theorem?
+With this caclulation the excessive moves could be filtered out, which leads us to having the shortest path and the unncesarry moves.
+
+Keywords: Matrix, Coordinates, Pythagorean theorem, Starting/End Path
+
+Personal Note
+For all the above I want inform the following:
+In theory I cannot precisly say which setup will work best as each situation is different in the practical world vs theory world.
+I can only just test and try (bench) with different technologies and choose the best one. There is no one single best option to all problems.
+Also I am not fully aware of the complete infrastructure, but the key is continously reevaluate and redefine with the team each time till we get our desired results.
